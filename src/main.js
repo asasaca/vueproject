@@ -17,7 +17,7 @@ var routes = [
   { path: '/login', component: Login },
 
   { path: '/main/:listName/:index', component: Main },
-  { path: '/main/:listName', component: Main },
+  // { path: '/main/:listName', component: Main },
 
   { path: '/main/:listName/:index', component: TodoMemo },
 ];

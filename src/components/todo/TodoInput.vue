@@ -36,8 +36,8 @@ export default {
 
 <style scoped>
 input {
-    border-style: groove;
-    width: 200px;
+    /* border-style: groove; */
+    /* width: 200px; */
     line-height: normal !important;
   }
 input:focus {

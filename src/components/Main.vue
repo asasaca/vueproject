@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ msg }} / {{$route.params.listName}} List</h1>
+    <h1>{{$route.params.listName}} List</h1>
 
     <div id="left">
       <TodoHeader v-bind:propsdata="localList" v-on:selectList="selectList" v-on:addList="addList"></TodoHeader>
@@ -10,9 +10,10 @@
         <TodoInput v-on:addTodo="addTodo"></TodoInput>
         <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo" @selectedTodo="selectedTodo" @checkTodo="checkTodo"></TodoList>
     </div>
-    <div id="right" v-bind:style="{ display: display}">
+
+    <!-- <div id="right" v-bind:style="{ display: display}">
         <TodoMemo v-bind:propsdata="todoItems" v-on:updateMemo="updateMemo"></TodoMemo>
-    </div>
+    </div> -->
 
     <div id="footer">
         <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
@@ -214,19 +215,21 @@ export default {
  border: 1px solid #bcbcbc;
 }
 #left {
- width: 10%;
- padding: 20px;
- margin-right: 20px;
- margin-bottom: 20px;
- float: left;
- border: 1px solid #bcbcbc;
+  width: 25%;
+  padding: 5px;
+  margin-right: 10px;
+  /* margin-bottom: 0px; */
+  float: left;
+  border: 1px solid #bcbcbc;
+  font-size: 13px;
 }
 #content {
- width: 48%;
- padding: 20px;
- margin-bottom: 20px;
- float: left;
- border: 1px solid #bcbcbc;
+  width: 70%;
+  /* padding: 20px; */
+  /* margin-bottom: 20px; */
+  float: left;
+  border: 1px solid #bcbcbc;
+  font-size: 13px;
 }
 #right {
  width: 40%;
