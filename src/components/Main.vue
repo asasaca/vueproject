@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ msg }} / {{$route.params.listName}} List</h1>
+    <h1>{{$route.params.listName}} List</h1>
 
     <div id="left">
       <TodoHeader v-bind:propsdata="localList" v-on:selectList="selectList" v-on:addList="addList"></TodoHeader>
@@ -229,7 +229,7 @@ export default {
  border: 1px solid #bcbcbc;
 }
 #right {
- width: 40%;
+ width: 37%;
  padding: 20px;
  margin-bottom: 20px;
  float: right;

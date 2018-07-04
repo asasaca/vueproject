@@ -1,14 +1,15 @@
 <template>
   <ul class="float_left_padding_0">
-    <li v-for="(localList, index) in propsdata" @click="selectList(localList.List, localList.ListUUID)">
+    <li v-for="(localList, index) in propsdata" v-on:click="selectList(localList.List, localList.ListUUID)">
       <span class="span">{{localList.List}}</span>
     </li>
-
-    <li><input type="text" v-model="newList" id="createList" class="newList"></li>
+    <li><input type="text" v-model="newList" class="newList"></li>
     <li>
       <span v-on:click="addList" class="span">
         <i class="addBtn fa fa-plus" aria-hidden="true"></i>
+        
       </span>
+
     </li>
   </ul>
 </template>
@@ -19,19 +20,26 @@ export default {
   data() {
     return {
       newList:'',
-      // listArray:JSON.parse(window.localStorage.getItem('List')),
     }
   },
   methods: {
     addList(){
       if(this.newList!==""){
-        var value = this.newList && this.newList.trim();
-        this.$emit('addList', value);
+        var newList = this.newList && this.newList.trim();
+        this.$emit('addList', newList);
         this.newList='';
+      }else{
+        this.open3();
       }
     },
     selectList(List, ListUUID){
       this.$emit('selectList', List, ListUUID);
+    },
+    open3() {
+      this.$message({
+        message: 'Warning, this is a warning message.',
+        type: 'warning'
+      });
     },
   }
 }

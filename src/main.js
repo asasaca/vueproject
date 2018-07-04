@@ -8,17 +8,18 @@ import Login from './components/Login.vue';
 import TodoMemo from './components/todo/TodoMemo.vue';
 
 import 'expose-loader?$!expose-loader?jQuery!jquery';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-Vue.use(VueRouter)
+import ElementUI from 'element-ui';
+
+Vue.use(VueRouter);
+Vue.use(ElementUI);
 
 var routes = [
   { path: '/main', component: Main },
   { path: '/login', component: Login },
 
   { path: '/main/:listName/:index', component: Main },
-  // { path: '/main/:listName', component: Main },
-
   { path: '/main/:listName/:index', component: TodoMemo },
 ];
 
