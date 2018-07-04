@@ -7,7 +7,7 @@
     <li>
       <span v-on:click="addList" class="span">
         <i class="addBtn fa fa-plus" aria-hidden="true"></i>
-        
+
       </span>
 
     </li>
@@ -37,7 +37,7 @@ export default {
     },
     open3() {
       this.$message({
-        message: 'Warning, this is a warning message.',
+        message: 'Warning, Please insert List name.',
         type: 'warning'
       });
     },

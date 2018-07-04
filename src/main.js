@@ -7,13 +7,14 @@ import Login from './components/Login.vue';
 
 import TodoMemo from './components/todo/TodoMemo.vue';
 
-import 'expose-loader?$!expose-loader?jQuery!jquery';
+// import 'expose-loader?$!expose-loader?jQuery!jquery';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ElementUI from 'element-ui';
 
 Vue.use(VueRouter);
 Vue.use(ElementUI);
+
 
 var routes = [
   { path: '/main', component: Main },

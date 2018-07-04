@@ -27,8 +27,8 @@
 export default {
   data() {
     return {
-      listName : '',
-      index : '',
+      // listName : '',
+      // index : '',
     }
   },
   methods: {
