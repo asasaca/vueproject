@@ -222,17 +222,18 @@ export default {
  border: 1px solid #bcbcbc;
 }
 #content {
- width: 48%;
+ width: 35%;
  padding: 20px;
+ margin-right: 20px;
  margin-bottom: 20px;
  float: left;
  border: 1px solid #bcbcbc;
 }
 #right {
- width: 37%;
+ width: 35%;
  padding: 20px;
  margin-bottom: 20px;
- float: right;
+ float: left;
  border: 1px solid #bcbcbc;
 }
 
